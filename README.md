@@ -2,12 +2,12 @@
 
 #### 사용 라이브러리
 
-`react`,`react-dom`,`react-router-dom`
+`react`,`react-dom`,`react-router-dom`,`styled-components`, `redux`, `react-redux`, `redux-actions`, `immer`, `redux-devtools-extension`
 
 #### Page
 
-- LoginPage.js - 로그인
-- RegisterPage.js - 회원가입
-- WritePage.js - 글쓰기
-- PostPage.js - 포스트 읽기
-- PostListPage.js - 포스트 목록
+- LoginPage.js - 로그인 - `'/login'`
+- RegisterPage.js - 회원가입 - `'/register'`
+- WritePage.js - 글쓰기 - `'/write'`
+- PostPage.js - 포스트 읽기 - `'/@:username/:postId'`
+- PostListPage.js - 포스트 목록 - `['/@:username', '/']`

@@ -11,9 +11,9 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<PostListPage />} />
+        <Route path="/@:username" element={<PostListPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        {/* <Route path={['/@:username', '/*']} element={<PostListPage />} /> */}
         <Route path="/@:username/:postId" element={<PostPage />} />
         <Route path="/write" element={<WritePage />} />
       </Routes>
