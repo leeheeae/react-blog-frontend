@@ -23,3 +23,12 @@
 
 - AuthForm에서 type으로 받아온 props를 확인하여 해당 페이지가 로그인인지 회원가입인지 구분
 - initializeForm 액션 생성함수를 호출하여 맨 처음 렌더링 후 form이 초기화 되도록 설정
+- redux-saga를 통해 쉽게 API 요청을 할 수 있도록 loading, createRequestSaga 유틸 함수 설정
+
+##### 프록시 설정
+
+- CORS(Cross Origin Request)오류
+- 네트워크 요청을 할 때 주소가 다른 경우에 발생
+- 다른 주소에서도 API를 호출할 수 있도록 서버쪽 코드를 수정해줘야함
+- 이번 프로젝트에서는 같은 호스트에서 제공할 예정이기 때문에 이러한 설정은 하지 않을 예정
+- 'package.json'파일 아래에 proxy 코드 작성
