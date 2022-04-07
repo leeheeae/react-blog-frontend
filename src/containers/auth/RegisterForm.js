@@ -79,6 +79,11 @@ const RegisterForm = () => {
   useEffect(() => {
     if (user) {
       navigate('/');
+      try {
+        localStorage.setItem('user', JSON.stringify(user));
+      } catch (err) {
+        console.log('localStorage is not working');
+      }
     }
   }, [user, navigate]);
 
