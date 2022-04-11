@@ -50,12 +50,19 @@ const Editor = ({ onChangeField, title, body }) => {
 
     //quill에 text-change 이벤트 핸들러 등록
     const quill = quillInstance.current;
-    quill.on('text-change', (delta, onDelta, source) => {
+    quill.on('text-change', (delta, onDelta, source) => { 
       if (source === 'user') {
         onChangeField({ key: 'body', value: quill.root.innerHTML });
       }
     });
   }, [onChangeField]);
+
+  const mounted = useRef(false);
+  useEffect(() => {
+    if (mounted.current) return;
+    mounted.current = true;
+    quillInstance.current.root.innerHTML = body;
+  }, [body]);
 
   const onChangeTitle = (e) => {
     onChangeField({ key: 'title', value: e.target.value });
