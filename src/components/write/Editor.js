@@ -50,7 +50,7 @@ const Editor = ({ onChangeField, title, body }) => {
 
     //quill에 text-change 이벤트 핸들러 등록
     const quill = quillInstance.current;
-    quill.on('text-change', (delta, onDelta, source) => { 
+    quill.on('text-change', (delta, onDelta, source) => {
       if (source === 'user') {
         onChangeField({ key: 'body', value: quill.root.innerHTML });
       }
