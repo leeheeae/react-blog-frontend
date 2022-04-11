@@ -2,7 +2,7 @@
 
 #### 사용 라이브러리
 
-`react`,`react-dom`,`react-router-dom`,`styled-components`, `redux`, `react-redux`, `redux-actions`, `immer`, `redux-devtools-extension`, `axios`, `redux-saga`, `quill`, `qs`,
+`react`,`react-dom`,`react-router-dom`,`styled-components`, `redux`, `react-redux`, `redux-actions`, `immer`, `redux-devtools-extension`, `axios`, `redux-saga`, `quill`, `qs`,`react-helmet-async`
 
 #### Page
 
