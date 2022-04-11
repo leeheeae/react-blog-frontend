@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 import Responsive from '../common/Responsive';
+import SubInfo from '../common/SubInfo';
+import Tags from '../common/Tags';
 
 const PostViewerBlock = styled(Responsive)`
   margin-top: 4rem;
@@ -14,31 +16,6 @@ const PostHead = styled.div`
     font-size: 3rem;
     line-height: 1.5;
     margin: 0;
-  }
-`;
-
-const SubInfo = styled.div`
-  margin-top: 1rem;
-  color: ${palette.gray[6]};
-
-  span + span::before {
-    color: ${palette.gray[5]};
-    padding: 0 0.25rem;
-    content: '\\B7';
-  }
-`;
-
-const Tags = styled.div`
-  margin-top: 0.5rem;
-  .tag {
-    display: inline-block;
-    color: ${palette.violet[7]};
-    text-decoration: none;
-    margin-right: 0.5rem;
-
-    &:hover {
-      color: ${palette.violet[6]};
-    }
   }
 `;
 
@@ -66,19 +43,12 @@ const PostViewer = ({ post, loading, error }) => {
     <PostViewerBlock>
       <PostHead>
         <h1>{title}</h1>
-        <SubInfo>
-          <span>
-            <b>{user.username}</b>
-          </span>
-          <span>{new Date(publishedDate).toLocaleDateString()}</span>
-        </SubInfo>
-        <Tags>
-          {tags.map((tag) => (
-            <div className="tag" key={tag}>
-              #{tag}
-            </div>
-          ))}
-        </Tags>
+        <SubInfo
+          username={user.username}
+          publishedDate={publishedDate}
+          hasMarginTop
+        />
+        <Tags tags={tags} />
       </PostHead>
       <PostContent dangerouslySetInnerHTML={{ __html: body }} />
     </PostViewerBlock>
