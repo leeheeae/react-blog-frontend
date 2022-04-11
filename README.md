@@ -2,7 +2,7 @@
 
 #### 사용 라이브러리
 
-`react`,`react-dom`,`react-router-dom`,`styled-components`, `redux`, `react-redux`, `redux-actions`, `immer`, `redux-devtools-extension`, `axios`, `redux-saga`
+`react`,`react-dom`,`react-router-dom`,`styled-components`, `redux`, `react-redux`, `redux-actions`, `immer`, `redux-devtools-extension`, `axios`, `redux-saga`, `quill`
 
 #### Page
 
@@ -32,3 +32,12 @@
 - 다른 주소에서도 API를 호출할 수 있도록 서버쪽 코드를 수정해줘야함
 - 이번 프로젝트에서는 같은 호스트에서 제공할 예정이기 때문에 이러한 설정은 하지 않을 예정
 - 'package.json'파일 아래에 proxy 코드 작성
+
+### 글쓰기 기능 구현하기
+
+> quill 라는 에디터 라이브러리 사용
+
+1. 에디터 UI 구현
+2. 에디터 하단 UI 구현
+3. 리덕스로 글쓰기 상태 관리
+4. API 연동
