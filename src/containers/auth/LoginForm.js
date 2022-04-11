@@ -58,7 +58,6 @@ const LoginForm = () => {
   //user값이 잘 설정 되었는지 확인
   useEffect(() => {
     if (user) {
-      console.log('잇음', user);
       navigate('/');
       try {
         localStorage.setItem('user', JSON.stringify(user));
